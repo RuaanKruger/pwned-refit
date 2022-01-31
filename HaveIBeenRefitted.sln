@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaveIBeenRefitted", "src\Ha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaveIBeenRefitted.UnitTests", "tests\HaveIBeenRefitted.UnitTests\HaveIBeenRefitted.UnitTests.csproj", "{C4A587C4-8CEE-4048-A24E-4BC4A24E5B92}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{BB5C9BBA-ADDF-4123-B1AD-56301C6CB024}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

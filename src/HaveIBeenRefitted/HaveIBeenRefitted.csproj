@@ -4,4 +4,13 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Refit" Version="6.2.16" />
+      <PackageReference Include="Refit.HttpClientFactory" Version="6.2.16" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Requests" />
+    </ItemGroup>
+
 </Project>
