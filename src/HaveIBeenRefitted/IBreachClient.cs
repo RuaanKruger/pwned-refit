@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using HaveIBeenRefitted.Responses;
 using Refit;
+// ReSharper disable UnusedMember.Global
 
 namespace HaveIBeenRefitted
 {
