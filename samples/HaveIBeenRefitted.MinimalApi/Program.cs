@@ -6,9 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services.AddHaveIBeenRefitted(
     o =>
     {
-        o.UserAgent = "USer Agent";
+        o.UserAgent = "Have I Been Refitted";
         o.BaseUrl = "https://haveibeenpwned.com";
-        o.ApiKey = "IPIkey";
+        // Not setting ApiKey so we can make use of our environment variable
     });
 
 services.AddEndpointsApiExplorer();

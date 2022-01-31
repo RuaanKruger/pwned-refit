@@ -24,7 +24,7 @@ namespace HaveIBeenRefitted.DelegatingHandlers
         
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            request.Headers.Add("hibp-api-key", _options.ApiKey);
+            request.Headers.Add("hibp-api-key", _options.ApiKey ?? Environment.GetEnvironmentVariable("HIBP_API"));
             return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
         }
     }
