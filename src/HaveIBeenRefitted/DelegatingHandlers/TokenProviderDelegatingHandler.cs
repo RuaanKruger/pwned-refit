@@ -8,11 +8,12 @@ using Microsoft.Extensions.Options;
 namespace HaveIBeenRefitted.DelegatingHandlers
 {
     /// <summary>
-    /// Each request to the API must be accompanied by a user agent request header.
-    /// Typically this should be the name of the app consuming the service.
-    /// A missing user agent will result in an HTTP 403 response. 
+    /// The API token can either be provided via the IOptions during service registration or as an environment variable "HIBP_API"
     /// See <a href="https://haveibeenpwned.com/api/v3/#Authorisation"></a>
     /// </summary>
+    /// <remarks>
+    /// If the <see cref="HaveIBeenRefittedOptions.ApiKey"/> property has been set, it will take preference over the environment variable
+    /// </remarks>
     public class TokenProviderDelegatingHandler : DelegatingHandler
     {
         private readonly HaveIBeenRefittedOptions _options;
