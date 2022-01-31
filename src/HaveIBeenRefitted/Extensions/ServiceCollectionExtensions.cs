@@ -47,9 +47,8 @@ namespace HaveIBeenRefitted.Extensions
             services.AddOptions<HaveIBeenRefittedOptions>();
             
             // Delegating Handlers
-            services.AddSingleton<TokenProviderDelegatingHandler>();
-            services.AddSingleton<UserAgentDelegatingHandler>();
-            
+            services.AddTransient<TokenProviderDelegatingHandler>();
+            services.AddTransient<UserAgentDelegatingHandler>();
             
             // Breach client
             services
