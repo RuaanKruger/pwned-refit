@@ -29,6 +29,9 @@ if (builder.Environment.IsDevelopment())
 }
 
 app.MapGet("/", () => "Hello World!");
-app.MapGet("api/breaches/{breachName}", (string breachName, IBreachClient client) => client.GetBreaches(breachName));
+app.MapGet("api/breaches/{breachName}", 
+    (string breachName, IBreachClient client) => client.GetBreaches(breachName));
+app.MapGet("api/breachedaccount/{breachName}", 
+    (string breachName, IBreachClient client) => client.GetAllBreachesForAccount(breachName));
 
 await app.RunAsync();
